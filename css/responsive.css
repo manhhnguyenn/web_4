@@ -1,0 +1,5 @@
+@media screen and (max-width: 768px) {
+    .logo, header .btn-cta.dk-header {
+        display: none;
+    }
+}
