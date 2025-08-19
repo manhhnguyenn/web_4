@@ -17,23 +17,23 @@
   <header>
     <div class="logo">Vay Theo Lương</div>
     <nav>
-      <ul>
-        <li><a href="#">Trang chủ</a></li>
-        <li><a href="#">Sản phẩm</a></li>
-      </ul>
+      <div class="navigator">
+        <button class="btn-nav" onclick="window.location.href='/'">Trang chủ</button>
+        <button class="btn-nav" onclick="location.href='#contactForm'">Sản phẩm</button>
+      </div>
     </nav>
-    <a href="#form" class="btn-cta dk-header">Đăng ký vay</a>
+    <a href="#contactForm" class="btn-cta dk-header">Đăng ký vay</a>
   </header>
 
   <!-- Banner -->
   <div class="banner">
     <h1>Vay theo lương không tài sản đảm bảo</h1>
     <p>Thủ tục đơn giản - Uy tín - Hiệu quả - Giải ngân nhanh chóng</p>
-    <a href="#form" class="btn">Đăng ký ngay</a>
+    <a href="#contactForm" class="btn">Đăng ký ngay</a>
   </div>
 
   <!-- Form -->
-  <div id="form" class="form-section">
+  <div id="contactForm" class="form-section">
     <h2>Thông tin liên hệ</h2>
     <form>
       <input name="name" type="text" placeholder="Họ và tên" required>
@@ -51,42 +51,178 @@
   </div>
 
   <!-- Lợi ích -->
-  <section>
-    <h2>Ưu điểm khi vay tiêu dùng của ngân hàng</h2>
-    <div class="grid">
-      <div class="card">
-        <div class="card-icon">
-          <picture class="image-wrapper-rte324 css-1t6d96p">
-            <source media="(max-width: 768px)"
-              srcset="images/icon_1_768.webp 768w, images/icon_1_776.webp 774w"
-              sizes="100vw" type="image/webp">
-            <source
-              srcset="images/icon_1_255.webp 255w, images/icon_1_510.webp 510w, images/icon_1_765.webp 765w, images/icon_1_776.webp 774w"
-              sizes="33.33vw" type="image/webp">
-            <source
-              srcset="images/icon_1_776.webp"
-              type="image/png"><img
-              src="images/icon_1_776.webp"
-              alt="" decoding="async" class="lazyload css-qi53z0" loading="lazy">
-          </picture>
+  <section class="section-benefit">
+    <h1 class="tittle">Ưu điểm khi vay tiêu dùng của ngân hàng</h1>
+    <div class="benefits">
+      <div class="benefits-item">
+        <div class="item-icon">
+          <div>
+            <picture class="image-wrapper-rte324 css-1t6d96p">
+              <source media="(max-width: 768px)" srcset="images/icon_1_768.webp 768w, images/icon_1_776.webp 774w"
+                sizes="100vw" type="image/webp">
+              <source
+                srcset="images/icon_1_255.webp 255w, images/icon_1_510.webp 510w, images/icon_1_765.webp 765w, images/icon_1_776.webp 774w"
+                sizes="33.33vw" type="image/webp">
+              <source srcset="images/icon_1_776.webp" type="image/png"><img class="item-image"
+                src="images/icon_1_510.webp" alt="" decoding="async" class="lazyload css-qi53z0" loading="lazy">
+            </picture>
+          </div>
         </div>
 
-        Không cần thế chấp
+        <div class="item-info">
+          <p>Đáp ứng được nhu cầu tiêu dùng cần thiết của cuộc sống như vay thấu chi, vay sửa chữa nhà cửa, mua xe cộ,
+            trang thiết bị gia đình</p>
+        </div>
 
       </div>
-      <div class="card">Giải ngân trong ngày</div>
-      <div class="card">Thủ tục đơn giản</div>
-      <div class="card">Hạn mức lên đến 300 triệu</div>
+
+      <div class="benefits-item">
+        <div class="item-icon">
+          <div>
+            <picture class="image-wrapper-rte324 css-1t6d96p">
+              <source media="(max-width: 768px)" srcset="images/icon_2_768.webp 768w, images/icon_2_776.webp 774w"
+                sizes="100vw" type="image/webp">
+              <source
+                srcset="images/icon_2_255.webp 255w, images/icon_2_510.webp 510w, images/icon_2_765.webp 765w, images/icon_2_776.webp 774w"
+                sizes="33.33vw" type="image/webp">
+              <source srcset="images/icon_2_776.webp" type="image/png"><img class="item-image"
+                src="images/icon_2_510.webp" alt="" decoding="async" class="lazyload css-qi53z0" loading="lazy">
+            </picture>
+          </div>
+        </div>
+
+        <div class="item-info">
+          <ul>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <p>Tỷ lệ cho vay lên đến 95% so với nhu cầu vốn</p>
+            </li>
+            <li><i class="fa-solid fa-circle-check"></i>Hạn mức cho vay đến 900 triệu
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <p>Lãi suất hấp dẫn, cạnh tranh</p>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="benefits-item">
+        <div class="item-icon">
+          <div>
+            <picture class="image-wrapper-rte324 css-1t6d96p">
+              <source media="(max-width: 768px)" srcset="images/icon_3_768.webp 768w, images/icon_3_776.webp 774w"
+                sizes="100vw" type="image/webp">
+              <source
+                srcset="images/icon_3_255.webp 255w, images/icon_3_510.webp 510w, images/icon_3_765.webp 765w, images/icon_3_776.webp 774w"
+                sizes="33.33vw" type="image/webp">
+              <source srcset="images/icon_3_776.webp" type="image/png"><img class="item-image"
+                src="images/icon_3_510.webp" alt="" decoding="async" class="lazyload css-qi53z0" loading="lazy">
+            </picture>
+          </div>
+        </div>
+
+        <div class="item-info">
+          <ul>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <p>Thời gian giải ngân nhanh chóng</p>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <p>Hồ sơ chứng minh đơn giản</p>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <p>Không cần thế chấp, không cần tài sản đảm bảo, không gọi điện người thân</p>
+            </li>
+          </ul>
+        </div>
+
+      </div>
     </div>
   </section>
 
-  <!-- Lưu ý -->
-  <section>
-    <h2>Lưu ý khi vay</h2>
-    <p>- Thu nhập từ 5 triệu/tháng trở lên</p>
-    <p>- Độ tuổi 20 - 60</p>
-    <p>- Không có nợ xấu</p>
+  <!-- Bảng lãi mô phỏng -->
+  <section class="profit_table">
+    <h2 class="tittle">Bảng lãi mô phỏng</h2>
+    <div class="profit_table-imitate">
+      <img class="img-profit" src="images/bang_lai.jpg" alt="Bảng lãi">
+    </div>
+    <p class="note">(*) Lưu ý: Ví dụ trên chỉ mang tính chất minh họa. Lãi suất thực tế được xét duyệt phụ thuộc vào
+      điều kiện vay của từng khách hàng.</p>
   </section>
+
+  <!-- Gói vay -->
+  <section class="package-loan">
+    <h1 class="tittle">Sản phẩm ưu đãi</h1>
+    <div class="package">
+      <div class="package-list package-item">
+        <article class="card" role="listitem">
+          <img src="images/images779484_1.png" alt="Giáo viên">
+          <h4 class="uppercase">Vay tín chấp ưu đãi giáo viên</h4>
+          <ul>
+            <li>Khoản vay tối đa: 12-24 lần lương</li>
+            <li>Kỳ hạn tối đa: 5 năm</li>
+            <li>Thời gian làm việc: 2-3 ngày</li>
+            <li>Không cần tài sản đảm bảo</li>
+          </ul>
+
+          <a href="#contactForm"><button class="btn">Đăng ký ngay</button></a>
+        </article>
+
+        <article class="card" role="listitem">
+          <img src="images/nv_vp.jpg" alt="Nhân viên văn phòng">
+          <h4 class="uppercase">Vay nhân viên văn phòng</h4>
+          <ul>
+            <li>Khoản vay tối đa: 12-24 lần lương</li>
+            <li>Kỳ hạn tối đa: 5 năm</li>
+            <li>Thời gian làm việc: 2-3 ngày</li>
+            <li>Không cần tài sản đảm bảo</li>
+          </ul>
+          <button class="btn">Đăng ký ngay</button>
+        </article>
+
+        <article class="card" role="listitem">
+          <img src="images/bsi.webp" alt="Bác sĩ">
+          <h4 class="uppercase">Vay ưu đãi bác sĩ</h4>
+          <ul>
+            <li>Khoản vay tối đa: 12-24 lần lương</li>
+            <li>Kỳ hạn tối đa: 5 năm</li>
+            <li>Thời gian làm việc: 2-3 ngày</li>
+            <li>Không cần tài sản đảm bảo</li>
+          </ul>
+          <button class="btn">Đăng ký ngay</button>
+        </article>
+      </div>
+      <div id="contactForm" class="form-section package-item">
+        <h1 class="tittle">Đăng ký ngay</h1>
+        <form>
+          <input name="name" type="text" placeholder="Họ và tên" required>
+          <input name="phone" type="tel" placeholder="Số điện thoại" required>
+          <input name="amount" type="text" placeholder="Hạn mức vay (ví dụ: 20,000,000)" required>
+          <select name="package" required>
+            <option value="">Bạn đang làm gì?</option>
+            <option value="Nhân viên văn phòng">Nhân viên văn phòng/đi làm hưởng lương</option>
+            <option value="Công chức/viên chức nhà nước">Công chức/ viên chức nhà nước</option>
+            <option value="Công an/bộ đội">Công an/ Bộ đội</option>
+            <option value="Khác">Khác</option>
+          </select>
+          <button type="submit">Gửi thông tin</button>
+        </form>
+      </div>
+    </div>
+    
+  </section>
+
+  <!-- Lưu ý -->
+   <section class="policy-note">
+      <h1 class="tittle">Chính sách khách hàng cần lưu ý</h1>
+      <div class="list-note">
+        
+      </div>
+   </section>
 
   <div class="pc_footer_contact g_right">
     <div class="fcontact_item" style="background: none;">

@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth; /* hiệu ứng mượt */
+}
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -26,7 +30,7 @@ header {
 
 header .logo,
 header .btn-cta,
-header nav ul li {
+header nav .navigator .btn-nav {
   border: 1px solid;
   padding: 10px 20px;
   background: #fff;
@@ -37,32 +41,54 @@ header nav ul li {
   text-decoration: none;
 }
 
-header nav ul {
+header nav .navigator {
   display: flex;
   list-style: none;
 }
 
-header nav ul li {
+header nav .navigator .btn-nav {
   margin-left: 20px;
+  cursor: pointer;
 }
 
-header nav ul li a {
+header nav .navigator .btn-nav a {
   text-decoration: none;
   color: #02483e;
   font-weight: 500;
 }
 
-/* header .btn-cta {
-  background: #02483e;
+header .btn-cta:hover {
+  background: #dd3333;
   color: #fff;
-  padding: 8px 16px;
-  border-radius: 4px;
-  text-decoration: none;
-} */
+}
+
+nav .navigator .btn-nav:hover {
+  background-color: #28a745;
+}
+
+nav .navigator .btn-nav:hover {
+  color: #fff;
+}
 
 /* Banner */
 .banner {
   background: url('/images/banner_1.jpg') center/cover no-repeat;
+/* mask để mờ 2 góc trên */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,          /* mờ trên */
+    black 25%,               /* hiện dần */
+    black 100%               /* rõ hoàn toàn */
+  );
+  -webkit-mask-composite: destination-in;
+
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 25%,
+    black 100%
+  );
+  mask-composite: intersect;
   padding: 80px 20px;
   color: white;
   text-align: center;
@@ -87,6 +113,10 @@ header nav ul li a {
   color: #fff;
   border-radius: 6px;
   text-decoration: none;
+}
+
+.banner .btn:hover {
+  background: #dd3333;
 }
 
 /* Form đăng ký */
@@ -126,7 +156,7 @@ header nav ul li a {
 }
 
 .form-section button:hover {
-  background: rgba(221, 51, 51, 1);
+  background: #dd3333;
 }
 
 /* Section */
@@ -136,28 +166,127 @@ section {
   margin-bottom: 20px;
 }
 
-section h2 {
+section .tittle {
   text-align: center;
   margin-bottom: 30px;
   color: #28a745;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.benefits-item {
+  flex: 1;
+}
+
+.item-icon .item-image {
+  width: 100%;
+}
+
+.section-benefit {
+  background: rgb(238, 252, 249);
+}
+
+.benefits {
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
-.card {
-  background: #f5f5f5;
+.benefits-item {
+  background: #fff;
   padding: 20px;
   border-radius: 8px;
   text-align: center;
-  transition: 0.3s;
+  transition: transform 0.3s ease;
 }
 
-.card:hover {
-  background: #e9ffe9;
+.benefits-item:hover {
+  transform: scale(1.1);
+}
+
+.item-info li {
+  list-style: none;
+  text-align: left;
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.item-info i {
+  color: rgb(2, 72, 62);
+  margin-right: 10px;
+}
+
+.profit_table .profit_table-imitate {
+  text-align: center;
+}
+
+.profit_table-imitate img {
+  width: 100%;
+}
+
+.note {
+  font-style: italic;
+  text-align: center;
+}
+
+.package-loan {
+  background-color: rgb(238, 252, 249);
+}
+
+.package {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.package .package-item {
+  height: fit-content;
+}
+
+.package .package-list {
+    display: flex;
+    gap: 22px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.package .package-list .card {
+      width: 320px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 14px;
+    box-shadow: 0 10px 30px rgba(82, 41, 122, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+}
+
+.card img {
+      width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card h4 {
+      margin: 4px 0;
+    color: #222;
+    font-size: 16px;
+}
+
+.card .btn {
+      background: #02483e;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    width: 100%;
+}
+
+.card ul {
+  margin-left: 15px;
 }
 
 /* Footer */

@@ -2,4 +2,25 @@
     .logo, header .btn-cta.dk-header {
         display: none;
     }
+
+    .package, .benefits {
+        flex-wrap: wrap;
+    }
+
+    .benefits .benefits-item {
+        flex: 100%;
+    }
+
+    header {
+        padding: 10px 0;
+        justify-content: center;
+    }
+
+    header nav .navigator .btn-nav {
+
+    }
+
+    section .tittle {
+        margin-bottom: 0;
+    }
 }
