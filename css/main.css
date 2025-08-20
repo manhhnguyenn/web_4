@@ -163,7 +163,7 @@ nav .navigator .btn-nav:hover {
 section {
   padding: 60px 5%;
   background: #fff;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 section .tittle {
@@ -229,6 +229,7 @@ section .tittle {
 }
 
 .package-loan {
+  padding-top: 20px;
   background-color: rgb(238, 252, 249);
 }
 
@@ -269,51 +270,88 @@ section .tittle {
 }
 
 .card h4 {
-      margin: 4px 0;
+    margin: 4px 0;
     color: #222;
     font-size: 16px;
+    text-align: center;
 }
 
 .card .btn {
-      background: #02483e;
+    background: #02483e;
     color: #fff;
     border: none;
     padding: 10px;
     border-radius: 8px;
     cursor: pointer;
-    font-weight: 700;
     width: 100%;
+    font-size: 16px;
 }
 
 .card ul {
   margin-left: 15px;
 }
 
-/* Footer */
-footer {
-  background: #007bff;
-  color: white;
-  padding: 30px 5%;
-  text-align: center;
+.policy-note {
+
 }
 
-/* Responsive */
-@media(max-width: 768px) {
-  header nav ul {
+.note-item {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.note-item .tittle-item {
+  font-weight: 700;
+}
+
+.note-item i {
+  margin-right: 10px;
+  color: #02483e;
+}
+
+/* Footer */
+footer {
+  background: #02483e;
+  color: white;
+  padding: 30px 5%;
+  text-align: left;
+}
+
+/* loading */
+
+.d_loading {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    z-index: 99999;
+}
+
+.d_loading.disabled{
     display: none;
-  }
+}
 
-  .banner h1 {
-    font-size: 1.8rem;
-  }
+.loader {
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #3498db;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+}
 
-  .form-section {
-    margin: 20px;
-  }
-
-  section {
-    padding: 40px 20px;
-  }
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* QUICK CONTACT */
@@ -337,19 +375,6 @@ footer {
   box-shadow: 0 3px 6px 3px #ccc;
   border-radius: 100%;
 }
-
-/* .pc_footer_contact .fcontact_item:nth-child(1){
-    background: linear-gradient(#0068ff, #77aeff);
-}
-.pc_footer_contact .fcontact_item:nth-child(2){
-    background: linear-gradient(#509600, #9ed65d);
-}
-.pc_footer_contact .fcontact_item:nth-child(3){
-    background: linear-gradient(#f7a400, #f8c86a);
-}
-.pc_footer_contact .fcontact_item:nth-child(4){
-    background: linear-gradient(#00b8d4, #8be7f5);
-} */
 
 .pc_footer_contact {
   position: fixed;

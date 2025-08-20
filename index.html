@@ -7,6 +7,7 @@
   <title>Vay Theo Lương - VPB Online</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/main.js"></script>
   <!-- Font Awesome CDN -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 </head>
@@ -19,7 +20,7 @@
     <nav>
       <div class="navigator">
         <button class="btn-nav" onclick="window.location.href='/'">Trang chủ</button>
-        <button class="btn-nav" onclick="location.href='#contactForm'">Sản phẩm</button>
+        <button class="btn-nav" onclick="location.href='#package-loan'">Sản phẩm</button>
       </div>
     </nav>
     <a href="#contactForm" class="btn-cta dk-header">Đăng ký vay</a>
@@ -35,7 +36,7 @@
   <!-- Form -->
   <div id="contactForm" class="form-section">
     <h2>Thông tin liên hệ</h2>
-    <form>
+    <form class="contact-form" method="post" action="sendmail.phhp">
       <input name="name" type="text" placeholder="Họ và tên" required>
       <input name="phone" type="tel" placeholder="Số điện thoại" required>
       <input name="amount" type="text" placeholder="Hạn mức vay (ví dụ: 20,000,000)" required>
@@ -46,7 +47,7 @@
         <option value="Công an/bộ đội">Công an/ Bộ đội</option>
         <option value="Khác">Khác</option>
       </select>
-      <button type="submit">Gửi thông tin</button>
+      <button type="submit" id="submitBtn">Gửi thông tin</button>
     </form>
   </div>
 
@@ -155,7 +156,7 @@
   </section>
 
   <!-- Gói vay -->
-  <section class="package-loan">
+  <section class="package-loan" id="package-loan">
     <h1 class="tittle">Sản phẩm ưu đãi</h1>
     <div class="package">
       <div class="package-list package-item">
@@ -169,7 +170,7 @@
             <li>Không cần tài sản đảm bảo</li>
           </ul>
 
-          <a href="#contactForm"><button class="btn">Đăng ký ngay</button></a>
+          <button class="btn" onclick="location.href='#contactForm'">Đăng ký ngay</button>
         </article>
 
         <article class="card" role="listitem">
@@ -181,7 +182,7 @@
             <li>Thời gian làm việc: 2-3 ngày</li>
             <li>Không cần tài sản đảm bảo</li>
           </ul>
-          <button class="btn">Đăng ký ngay</button>
+          <button class="btn" onclick="location.href='#contactForm'">Đăng ký ngay</button>
         </article>
 
         <article class="card" role="listitem">
@@ -193,12 +194,12 @@
             <li>Thời gian làm việc: 2-3 ngày</li>
             <li>Không cần tài sản đảm bảo</li>
           </ul>
-          <button class="btn">Đăng ký ngay</button>
+          <button class="btn" onclick="location.href='#contactForm'">Đăng ký ngay</button>
         </article>
       </div>
       <div id="contactForm" class="form-section package-item">
         <h1 class="tittle">Đăng ký ngay</h1>
-        <form>
+        <form class="contact-form" method="post" action="sendmail.phhp">
           <input name="name" type="text" placeholder="Họ và tên" required>
           <input name="phone" type="tel" placeholder="Số điện thoại" required>
           <input name="amount" type="text" placeholder="Hạn mức vay (ví dụ: 20,000,000)" required>
@@ -209,7 +210,7 @@
             <option value="Công an/bộ đội">Công an/ Bộ đội</option>
             <option value="Khác">Khác</option>
           </select>
-          <button type="submit">Gửi thông tin</button>
+          <button type="submit" id="submitBtn">Gửi thông tin</button>
         </form>
       </div>
     </div>
@@ -218,9 +219,26 @@
 
   <!-- Lưu ý -->
    <section class="policy-note">
-      <h1 class="tittle">Chính sách khách hàng cần lưu ý</h1>
+      <h1 class="tittle">Lưu ý khi vay</h1>
       <div class="list-note">
-        
+        <ul>
+          <li class="note-item">
+            <p class="tittle-item"><i class="fa-solid fa-circle-info"></i>Cân nhắc về khoản tiền đóng hàng tháng</p>
+            <p class="content-item">Số tiền đóng hàng tháng sẽ bao gồm cả lãi và gốc, vì vậy nên ở mức dưới 50% thu nhập hàng tháng để tránh gặp khó khăn về tài chính.</p>
+          </li>
+          <li class="note-item">
+            <p class="tittle-item"><i class="fa-solid fa-circle-info"></i>Trả chậm có sao bị phạt không?</p>
+            <p class="content-item">Có, khi bạn trả chậm thì lãi suất phạt sẽ là 150% lãi suất trên những ngày bạn nộp chậm. Nếu thời gian trả chậm từ 10 ngày trở lên lịch sử tín dụng sẽ được lưu trên ngân hàng nhà nước Việt Nam.</p>
+          </li>
+          <li class="note-item">
+            <p class="tittle-item"><i class="fa-solid fa-circle-info"></i>Tại sao lại có phí tất toán?</p>
+            <p class="content-item">Theo quy định của ngân hàng nhà nước, các khoản vay tiêu dùng đều là hợp đồng dân sự nên khi bạn tất toán sớm khoản vay là hủy hợp đồng các ngân hàng có thể yêu cầu bồi thường đó là phí tất toán khoản vay. Phí tất toán trong 3 năm đầu sẽ là 3%, từ năm thứ 3 trở đi miễn phí tất toán</p>
+          </li>
+          <li class="note-item">
+            <p class="tittle-item"><i class="fa-solid fa-circle-info"></i>Khoản vay</p>
+            <p class="content-item">Khi khách hàng tất toán toán khoản vay sẽ phải trả phí thanh toán trước hạn. Phí thanh toán: - Phí tất toán trước hạn từ 3% tính trên dư nợ gốc còn lại.Không yêu cầu trả lại toàn bộ Khoản vay cá nhân trong vòng 60 ngày trở xuống kể từ ngày cho vay</p>
+          </li>
+        </ul>
       </div>
    </section>
 
@@ -250,9 +268,24 @@
     </div>
   </div>
 
+  <div class="d_overlay" style="display: none"></div>
+  <div class="d_loading disabled">
+      <div class="loader"></div>
+  </div>
+
   <!-- Footer -->
-  <footer>
-    <p>Thông tin liên hệ: Hotline 0370 567 513 | VPB Online</p>
+  <footer class="section_footer">
+      <div class="container">
+          <h4 style="font-weight: bold; text-transform: uppercase;margin-bottom: 30px;">Thông tin liên hệ</h4>
+          <p style="margin-bottom: 10px;">Hotline: 123456789</p>
+          <div style="color: red; font-size: 18px;"> Chú ý: Chúng tôi không phải là đơn vị cung cấp dịch vụ cho vay và
+              không phát
+              hành các khoản vay. Dịch vụ của Chúng tôi giúp kết nối khách hàng với các Ngân hàng & Tổ chức tín dụng
+              uy tín tại Việt Nam.<br> Chúng tôi không tính phí sử dụng dịch vụ. Chi phí cuối cùng mà người vay phải
+              trả phụ thuộc vào từng khoản vay. Người dùng sẽ nhận được thông tin đầy đủ và chính xác về APR, cũng như
+              tất cả các khoản phí trước khi ký hợp đồng vay.
+          </div>
+      </div>
   </footer>
 
 </body>

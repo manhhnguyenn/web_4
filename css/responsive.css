@@ -1,9 +1,12 @@
 @media screen and (max-width: 768px) {
-    .logo, header .btn-cta.dk-header {
+
+    .logo,
+    header .btn-cta.dk-header {
         display: none;
     }
 
-    .package, .benefits {
+    .package,
+    .benefits {
         flex-wrap: wrap;
     }
 
@@ -16,11 +19,22 @@
         justify-content: center;
     }
 
-    header nav .navigator .btn-nav {
-
-    }
+    header nav .navigator .btn-nav {}
 
     section .tittle {
         margin-bottom: 0;
+    }
+
+    .banner h1 {
+        font-size: 1.8rem;
+    }
+
+    .form-section {
+        margin: 20px;
+        padding-top: 20px;
+    }
+
+    section {
+        padding: 40px 20px;
     }
 }
