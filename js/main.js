@@ -33,3 +33,7 @@ document.querySelectorAll('.contact-form').forEach(function(form) {
         });
     });
 });
+
+function toggleMenu() {
+  document.getElementById("navMenu").classList.toggle("active");
+}

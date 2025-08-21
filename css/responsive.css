@@ -37,4 +37,26 @@
     section {
         padding: 40px 20px;
     }
+
+    .note-item {
+        flex: 100%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-pc {
+        display: none;
+        /* chỉ ẩn menu PC */
+    }
+
+    #navMenu {
+        display: block;
+        /* menu mobile hiển thị khi active */
+    }
 }
